@@ -11,6 +11,62 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 /* src/index.css */
-.damion-font {
-  font-family: 'Damion', cursive;
+.cookie-font {
+  font-family: 'Cookie', cursive;
+}
+.aladin-font {
+  font-family: 'Aladin', cursive;
+}
+.box-before-after::before {
+  content: attr(data-before);
+  position: absolute;
+  top: -26px;
+  left: 45%;
+  font-size: 12px;
+  color: white;
+}
+.box-before-after::after {
+  content: attr(data-after);
+  position: absolute;
+  left: -26px;
+  top: 45%;
+  font-size: 12px;
+  color: white;
+}
+.mendeleev {
+  position: relative;
+  padding: 3px;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.mendeleev::after,
+.mendeleev::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: conic-gradient(from var(--angle), red, green, blue, red);
+  inset: 0;
+  border-radius: 8px;
+  padding: 3px;
+  z-index: -1;
+  animation: 3s rotate linear infinite;
+}
+
+.mendeleev::before {
+  filter: blur(12px);
+}
+
+@keyframes rotate {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
 }

@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
 import Table from './pages/Table';
+import Details from './pages/Details'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/table" element={<Table />} />
           <Route path="/about" element={<About />} />
+          <Route path='/details/:sign' element={<Details />} />
         </Routes>
       </Router>
     </>

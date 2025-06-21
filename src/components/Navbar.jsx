@@ -9,7 +9,7 @@ function Navbar() {
   return (
     <nav className="flex justify-between items-center py-3 px-8">
       {/* Left side - Logo or Home */}
-      <div className="text-xl font-bold text-gray-800">
+      <div className="text-xl font-bold text-gray-600">
         <NavLink
           to="/"
           className={({ isActive }) =>

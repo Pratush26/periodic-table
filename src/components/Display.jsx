@@ -4,12 +4,14 @@ const Box = ({ data }) => {
 
     return (
         <div
-            className="group p-2 text-white border-2 flex flex-col justify-self-end w-full transition-all duration-1140 ease-in-out cursor-pointer"
+            className="relative box-before-after p-2 text-white border-2 flex flex-col inset-shadow-sm inset-shadow-gray-400 w-full transition-all duration-1100 ease-in-out rounded-2xl cursor-pointer"
+            data-before={data.group}
+            data-after={data.period}
             style={{
                 gridRow: "1 / span 2",
                 gridColumn: "4 / span 2",
                 margin: data.m,
-                backgroundColor: data.border, // Initial border color
+                backgroundColor: data.border,
                 borderColor: data.border,
             }}
         >
